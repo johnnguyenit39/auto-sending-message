@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "city-engagement",
+  "private_key_id": "e89973311515c8e6a643284487cffa1a047392f1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCQKqLFwrua6ew\nq5C30AS0EiB6pppGsLR7ER+y62004tCkZy8zdbiLR0Gk0heqVTJ8xfVdBiezyim4\nkHCq8tTJM13beaIWw79yxmPEE2PTZp8JL3JyM/Wz0hDZFOaRKCxATHc3YFuT7I+1\n6nA/RFPq34D2Zp6NlOpBaE5+xlur8C7f0v3IMu7DGCacLcz8gUY1kDF4JZWGrbAD\npatxbdiyFgz7zJfxVPiWVCX9PBja3h2u056T5dWnK9K3R/7BA0sSh4EOLtFZZMGT\nzy8lULVwBvoaaFd1QpNTXe5bZfJhuEopv2Qme1Cbh2jcHueqjK5WEYrz6SiGehGu\nNEDU0UEDAgMBAAECggEAEmaNwR8tqegIunOGAeNyjpwo93VQp+GVNxMoLYqfjaLu\noKQllHpSQN8/GJ3OIBRx89/MnkM2/5Dm4tTL12WpQmXbPi8Ha6CfQgAI80ni6uON\nrRERhj/lxmLftbCFJrrndi/IGzbFdf2yn0jV2Shfyp/hV3XhDwhMKGX5CYlApciw\nTlnqYECPQLgHRVvhq3LoiLnkdRjk4qwL5da7WLSRaYRhRxt/x0rKiwVqcBi5KTHm\nyLa6zBFV/DZXCC43T4N1rJfpwYds77jGZNsjngA4uNOFEA804f4Gm7uKQLrEdvDS\n8JrIKPHG47qrU+exBXYCZ91+B4MUZ+ydI+15o+9YAQKBgQDvEgDjOEW37TPhskRd\nYIo0oTpvFwcFt866hnrNOCUy/taGkMnght6Dea2FGX/VdYTPVCaC7uKcfBvr7UJl\nezKYsjCLdaARpLxNVpC8rxZ1HUCCLzsTnEWJfeFR3d5d72TAyDHQtapysp8Zzsx0\nb8OPaXHZ4GgbZAale/1AQWyMMQKBgQDQAi7GWV9hAnUYJ81vTpSYW34fc7PsXLAs\nLJBtbBdnwi8+r8MXoXMVM77Q08UeXktzhlM7MwcY8H30C8jrLkc+6QQ5KlLFWV72\n+eG6AKA9+InavXmY6V0Dfk4tzH9yugaX1m40RtbP07rSaOiuEZam7fKVKJJf0Jgp\niN6wrrv3cwKBgQCjw4RiIaD4bf81IqVcBY6GoM7jXDXOP+vXr9kdDNHGjfSr9zCi\noiB4lXg8jYwYz8irMSy0UilfIlEKGtt5opu1J5LDZU7B50OqAptg9NsAXIpc4zen\npkun9FfNeZsiY6Nzv28IVfktWphL2HILbKfcbFG1+te1s54t67I+OtK9cQKBgDYM\nayUE8gCeB9kH9px2eawBEguQH+9JwkkoJzsXfBls3qPWPcY1IFchA/L1I+IZNFfH\nTncyciSr0L6KFWHuu3qAR6Wm9qzq5P8dvOZ85SZVH1TkKOVvtciDmELUQUWJSs9H\nW4lf4s9Lv96Ofe9FCLVFXOQfD7Gv3Onl859LN/I7AoGBAKtsZ9K/pNdQ8r3XlNeC\nnonkk1zGxyPFUxbRvy5MJdvDNFw8Z4HFdL8Iy3pOWHphMSLvFrOjzqE3EGkxNUHa\nCxzVCOovAPBEIN4iS7qx/a0sALO66hLwGnFlFd2UI6rrZ0p3q28ZM0QaaH+fQvCo\n9xds1dJ/dlOADuOOzjVEMfKf\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@city-engagement.iam.gserviceaccount.com",
+  "client_id": "110942374257567647146",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40city-engagement.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

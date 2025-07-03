@@ -1,0 +1,263 @@
+basePath: /api
+definitions:
+  common.Pagination:
+    properties:
+      count:
+        type: integer
+      index:
+        type: integer
+      size:
+        type: integer
+    type: object
+  common.PaginationRequest:
+    properties:
+      index:
+        type: integer
+      size:
+        type: integer
+    type: object
+  model.Message:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      sent:
+        type: boolean
+      sent_at:
+        type: string
+      to:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  model.MockJ:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  model.MockJAddRequest:
+    type: object
+  model.MockJGetListRequest:
+    properties:
+      Pagination:
+        $ref: '#/definitions/common.PaginationRequest'
+    type: object
+  model.MockJGetListResponse:
+    properties:
+      List:
+        items:
+          $ref: '#/definitions/model.MockJ'
+        type: array
+      Paging:
+        $ref: '#/definitions/common.Pagination'
+    type: object
+  model.MockJGetResponse:
+    type: object
+  model.MockJUpdateRequest:
+    type: object
+host: localhost:80
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: City Engagement API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: City Engagement API
+  version: "1.0"
+paths:
+  /api/v1/auto-sender/start:
+    post:
+      description: Khởi động tiến trình gửi tin nhắn tự động mỗi 2 phút
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Bắt đầu gửi tin nhắn tự động
+      tags:
+      - auto-sender
+  /api/v1/auto-sender/stop:
+    post:
+      description: Dừng tiến trình gửi tin nhắn tự động
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Dừng gửi tin nhắn tự động
+      tags:
+      - auto-sender
+  /api/v1/messages/sent:
+    get:
+      description: Trả về danh sách các tin nhắn đã gửi thành công
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Message'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Lấy danh sách tin nhắn đã gửi
+      tags:
+      - messages
+  /v2/mockj/create:
+    post:
+      description: Create a new MockJ
+      parameters:
+      - description: Create MockJ
+        in: body
+        name: MockJ
+        required: true
+        schema:
+          $ref: '#/definitions/model.MockJAddRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MockJGetResponse'
+      security:
+      - Bearer: []
+      summary: Create new MockJ
+      tags:
+      - MockJ
+  /v2/mockj/delete:
+    delete:
+      description: Delete a new MockJ
+      parameters:
+      - description: User UUID
+        format: uuid
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MockJ'
+      security:
+      - Bearer: []
+      summary: Delete new MockJ
+      tags:
+      - MockJ
+  /v2/mockj/get:
+    get:
+      description: Return MockJ
+      parameters:
+      - description: User UUID
+        format: uuid
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MockJGetResponse'
+      security:
+      - Bearer: []
+      summary: Get MockJ
+      tags:
+      - MockJ
+  /v2/mockj/list:
+    post:
+      description: Retrieve a list of MockJs based on provided filters and pagination
+      parameters:
+      - description: Get MockJs
+        in: body
+        name: MockJ
+        required: true
+        schema:
+          $ref: '#/definitions/model.MockJGetListRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MockJGetListResponse'
+      security:
+      - Bearer: []
+      summary: Get a list of MockJ
+      tags:
+      - MockJ
+  /v2/mockj/update:
+    put:
+      description: Update MockJ
+      parameters:
+      - description: User UUID
+        format: uuid
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update User
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.MockJUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.MockJGetResponse'
+      security:
+      - Bearer: []
+      summary: Update MockJ
+      tags:
+      - MockJ
+securityDefinitions:
+  Bearer:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
